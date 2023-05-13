@@ -1,10 +1,12 @@
 :root {
   --main-color: #2e2f42;
   --secondary-color: #434455;
+  --link-border-color: #8e8f99;
   --main-background-text-color: #ffffff;
   --secondary-background-color: #f4f4fd;
   --active-focus-hover-color: #4d5ae5;
   --botton-color: #404bbf;
+
   --main-font: "Roboto", sans-serif;
   --secondary-font: "Raleway", sans-serif;
 }
@@ -51,6 +53,7 @@ body {
 
 .main-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -168,6 +171,7 @@ body {
     url("../images/main-section-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -251,7 +255,7 @@ body {
   align-items: center;
   background-color: var(--secondary-background-color);
   border-radius: 4px;
-  height: 110px;
+  height: 112px;
   margin-bottom: 8px;
 }
 
@@ -343,6 +347,11 @@ body {
   margin-bottom: 8px;
 }
 
+.our-team-item-social {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .our-team-item-social-list {
   display: flex;
   gap: 24px;
@@ -367,14 +376,20 @@ body {
   background-color: #31d0aa;
 }
 
-.customers-container {
+.customers-section {
   padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customers-item {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
 }
 
 .customer-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -389,20 +404,23 @@ body {
 }
 
 .customer-container-item {
-  display: block;
-  border: 1px solid #8e8f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--link-border-color);
   border-radius: 4px;
-  padding: 16px 32px;
-  margin-bottom: 120px;
+  height: 100%;
+  color: var(--link-border-color);
 }
 
 .customer-container-item:hover,
 .customer-container-item:focus {
   border-color: var(--botton-color);
+  color: var(--botton-color);
 }
 
 .customer-logo {
-  fill: #8e8f99;
+  fill: currentColor;;
 }
 
 .customer-container-item:hover .customer-logo,
@@ -418,6 +436,7 @@ body {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-container-logo {
